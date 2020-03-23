@@ -109,8 +109,8 @@ export default class Carousel extends Component {
   componentWillUnmount() {
     this._clearTimer();
   }
-
-  componentWillReceiveProps({ children }) {
+  
+  UNSAFE_componentWillReceiveProps({ children }) {
     if (!isEqual(this.props.children, children)) {
       const { currentPage } = this.state;
       this._clearTimer();
